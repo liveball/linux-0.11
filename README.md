@@ -13,10 +13,10 @@ docker run -d --rm --name linux-0.11 mountainfeng/linux:0.11
 
 
 ### 打标签
-docker tag tinylab/linux-0.11-lab:latest mountainfeng/linux:0.11:latest         //打标签
+docker tag mountainfeng/linux:0.11 mountainfeng/linux-0.11:v1
 
 ### 将当前镜像发送到远端 hub.docker.com
-docker push mountainfeng/linux:0.11
+docker push mountainfeng/linux-0.11:v1
 
 
 ###导出容器
@@ -29,6 +29,9 @@ docker run -it mountainfeng/linux:0.11 /bin/bash
 
 ###exec进入容器，并启动bash ； -i参数来保持标准输入打开，-t并且分配一个伪终端，-d后台运行
 docker exec -it 453698741 bash
+
+###基于已有的docker容器，做一新的dokcer image.
+docker commit <container_id> <image_name>
 
 ### 查看network的名称，执行 
 docker network list

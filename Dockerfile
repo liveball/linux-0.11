@@ -1,5 +1,5 @@
 #源镜像
-FROM mountainfeng/linux:0.11
+FROM mountainfeng/linux-0.11:latest
 # FROM alpine:3.7
 #作者
 MAINTAINER mountainfpf "mountainfpf@gmail.com"
